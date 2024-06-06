@@ -1,0 +1,50 @@
+﻿@model webapimvc.Models.emp
+
+@{
+    ViewBag.Title = "details";
+}
+
+<h2>details</h2>
+
+<div>
+    <h4>emp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.empname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empemail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empemail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emplocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emplocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empdesignation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empdesignation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.empid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

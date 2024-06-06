@@ -1,0 +1,51 @@
+﻿@model IEnumerable<webapimvc.naveenpreg>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.empname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empemail)  
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emplocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empdesignation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.empname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empemail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emplocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empdesignation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.empid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.empid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.empid })
+        </td>
+    </tr>
+}
+
+</table>
